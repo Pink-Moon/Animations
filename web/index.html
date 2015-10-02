@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CSS Animations</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <style>
+            .vinyl { 
+                     width: 25%;
+                     margin-top: 5%; 
+                     margin-left: 38%; 
+                     margin-bottom: 5%; 
+                 }
+            .buttons { margin-left: 34%; }
+            .button-success,
+                .button-error,
+                .button-warning,
+                .button-secondary {
+                        color: white;
+                        border-radius: 4px;
+                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .button-success {
+                        background: rgb(28, 184, 65); /* this is a green */
+                    }
+
+                    .button-error {
+                        background: rgb(202, 60, 60); /* this is a maroon */
+                    }
+
+                    .button-warning {
+                        background: rgb(223, 117, 20); /* this is an orange */
+                    }
+
+                    .button-secondary {
+                        background: rgb(66, 184, 221); /* this is a light blue */
+                    }
+
+    </style>
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="splash-container">
+            <div class="splash">
+                <h1 style="text-align: center;">CSS Animations</h1>
+                <img src="img/disc-vinyl-icon.png" class="vinyl" id="vinyl">
+                <div class="buttons">
+                    <button id="shake"  class="button-success pure-button">Shake</button>
+                    <button id="rubber" class="button-warning pure-button">Rubber</button>
+                    <button id="flash"  class="button-error pure-button">Flash</button>
+                    <button id="bounce" class="button-success pure-button">Bounce</button>
+                    <button id="rotate" class="button-secondary pure-button">Rotate</button>
+                </div>  
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+
+            $(function(){
+
+                $('#shake').click(function() {
+                    $('#vinyl').addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+                         $(this).removeClass('animated shake');
+                    });
+                });
+
+                $('#rubber').click(function() {
+                    $('#vinyl').addClass('animated rubberBand').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+                         $(this).removeClass('animated rubberBand');
+                    });
+                });
+
+                $('#flash').click(function() {
+                    $('#vinyl').addClass('animated flash').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+                         $(this).removeClass('animated flash');
+                    });
+                });
+
+                $('#bounce').click(function() {
+                    $('#vinyl').addClass('animated bounceInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+                         $(this).removeClass('animated bounceInDown');
+                    });
+                });
+
+                $('#rotate').click(function() {
+                    $('#vinyl').addClass('animated rotateIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+                         $(this).removeClass('animated rotateIn');
+                    });
+                });
+            });
+
+        </script>
+    </body>
+</html>

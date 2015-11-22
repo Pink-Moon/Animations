@@ -6,17 +6,11 @@
         <title>CSS Animations</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <style>
-            .vinyl { 
-                     width: 25%;
-                     margin-top: 5%; 
-                     margin-left: 38%; 
-                     margin-bottom: 5%; 
-                 }
-            .buttons { margin-left: 35%; }
+
+            .vinyl { width: 40%; }
             .button-success,
                 .button-error,
                 .button-warning,
@@ -50,21 +44,21 @@
     </head>
     <body>
 
-        <div class="splash-container">
-            <div class="splash">
-                <h1 style="text-align: center;">CSS Animations</h1>
-                <img src="img/disc-vinyl-icon.png" class="vinyl" id="vinyl">
-                <div class="buttons">
+            <div class="jumbotron text-center">
+                    <h1>CSS Animations</h1>
+                    <img src="img/disc-vinyl-icon.png" class="vinyl center" id="vinyl">
+                    <div class="buttons">
                     <button id="shake"  class="button-success pure-button">Shake</button>
                     <button id="rubber" class="button-warning pure-button">Rubber</button>
                     <button id="flash"  class="button-error pure-button">Flash</button>
                     <button id="bounce" class="button-success pure-button">Bounce</button>
                     <button id="rotate" class="button-secondary pure-button">Rotate</button>
-                </div>  
             </div>
-        </div>
+    
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
         <script>
 
             $(function(){
